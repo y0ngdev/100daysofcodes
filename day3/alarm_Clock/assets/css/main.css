@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #4a98f7;
+  min-height: 100vh;
+}
+
+body,
+.container,
+.form-area {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background: #fff;
+  border-radius: 10px;
+  flex-direction: column;
+  padding: 30px 30px 38px;
+  width: 440px;
+}
+.container img {
+  max-width: 103px;
+}
+.container h1 {
+  font-size: 3em;
+  font-weight: 500;
+  margin: 30px 0;
+}
+.container .btn {
+  background: #4a98f7;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 17px 0;
+  outline: none;
+  width: 100%;
+}
+.container .form-area.disable {
+  opacity: 0.6;
+  pointer-events: none;
+}
+.container .form-area {
+  justify-content: space-between;
+  width: 100%;
+}
+.container .form-area .form-group {
+  border-radius: 5px;
+  border: 1px solid #999;
+  padding: 0 10px;
+  width: calc(33.3333333333% - 5px);
+}
+.container .form-area .form-group select {
+  outline: none;
+  border: none;
+  height: 53px;
+  width: 100%;
+  font-size: 19px;
+}/*# sourceMappingURL=main.css.map */
