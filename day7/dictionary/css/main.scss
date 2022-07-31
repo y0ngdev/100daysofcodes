@@ -1,0 +1,43 @@
+/* Import Google Font - Poppins */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    align-items: center;
+    background: #4d59fb;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.container {
+    background: #fff;
+    border-radius: 28px;
+    padding: 28px 28px 45px;
+    width: 420px;
+    header {
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+    }
+    .search {
+        margin: 35px 0 18px;
+        input {
+            border: 1px solid #999;
+            border-radius: 5px;
+            height: 53px;
+            width: 100%;
+            outline: none;
+        }
+         :where(i,
+        span) {
+            position: relative;
+        }
+    }
+}
