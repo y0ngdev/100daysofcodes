@@ -15,28 +15,153 @@ body {
   justify-content: center;
 }
 
+::-moz-selection {
+  color: #fff;
+  background: #4D59FB;
+}
+
+::selection {
+  color: #fff;
+  background: #4D59FB;
+}
+
 .container {
   background: #fff;
   border-radius: 28px;
-  padding: 28px 28px 45px;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+  padding: 25px 28px 45px;
   width: 420px;
 }
 .container header {
-  font-size: 20px;
+  font-size: 28px;
   font-weight: 500;
   text-align: center;
 }
 .container .search {
+  position: relative;
   margin: 35px 0 18px;
 }
 .container .search input {
   border: 1px solid #999;
   border-radius: 5px;
+  font-size: 16px;
   height: 53px;
-  width: 100%;
   outline: none;
+  padding: 0 42px;
+  width: 100%;
+}
+.container .search input:focus {
+  padding: 0 41px;
+  border: 2px solid #4D59FB;
+}
+.container .search input::-moz-placeholder {
+  color: #B8B8B8;
+}
+.container .search input:-ms-input-placeholder {
+  color: #B8B8B8;
+}
+.container .search input::placeholder {
+  color: #B8B8B8;
+}
+.container .search input:focus ~ i {
+  color: #4D59FB;
+}
+.container .search input:valid ~ span {
+  display: block;
 }
 .container .search :where(i,
 span) {
-  position: relative;
+  color: #999;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+}
+.container .search i {
+  left: 18px;
+  pointer-events: none;
+  font-size: 16px;
+}
+.container .search span {
+  cursor: pointer;
+  display: none;
+  font-size: 18px;
+  right: 15px;
+}
+.container ul {
+  height: 0;
+  opacity: 0;
+  padding-right: 1px;
+  overflow-y: hidden;
+  transition: all 0.2s ease;
+}
+.container ul li {
+  display: flex;
+  list-style: none;
+  margin-bottom: 14px;
+  align-items: center;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #D9D9D9;
+  justify-content: space-between;
+}
+.container ul li:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.container.active ul {
+  opacity: 1;
+  height: 303px;
+}
+.container.active .info-text {
+  display: none;
+}
+.container .word p {
+  font-size: 22px;
+  font-weight: 500;
+}
+.container .word span {
+  font-size: 12px;
+  color: #989898;
+}
+.container .word i {
+  color: #999;
+  font-size: 15px;
+  cursor: pointer;
+}
+.container .content {
+  max-height: 215px;
+  overflow-y: auto;
+}
+.container .content::-webkit-scrollbar {
+  width: 0px;
+}
+.container .content li .details {
+  padding-left: 10px;
+  border-radius: 4px 0 0 4px;
+  border-left: 3px solid #4D59FB;
+}
+.container .content li p {
+  font-size: 17px;
+  font-weight: 500;
+}
+.container .content li span {
+  font-size: 15px;
+  color: #7E7E7E;
+}
+.container .content li .synonyms .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .content li .synonyms span {
+  cursor: pointer;
+  margin-right: 5px;
+  text-decoration: underline;
+}
+.container .info-text {
+  font-size: 13px;
+  color: #9A9A9A;
+  margin: -3px 0 -10px;
+}
+.container .info-text span {
+  font-weight: 500;
 }/*# sourceMappingURL=main.css.map */
